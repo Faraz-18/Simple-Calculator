@@ -1,7 +1,7 @@
 import tkinter
 
 root = tkinter.Tk()
-root.geometry("400x200")
+root.geometry("300x300")
 root.title("Simple Calculator")
 
 def calculate(operation):
@@ -12,6 +12,8 @@ def calculate(operation):
         result_label['text'] = f"Result: {n1 + n2}"
     elif operation == "subtract":
         result_label['text'] = f"Result: {n1 - n2}"
+    elif operation == "multiply":
+        result_label['text'] = f"Result: {n1 * n2}"
 
 num1_label = tkinter.Label(root, text='Enter First Number: ')
 num1_label.pack()
@@ -28,6 +30,9 @@ add_btn.pack()
 
 subtract_btn = tkinter.Button(root, text='Subtract', command=lambda: calculate("subtract"), foreground="Red")
 subtract_btn.pack()
+
+multiply_btn = tkinter.Button(root, text='Multiply', command=lambda: calculate("multiply"), foreground="Blue")
+multiply_btn.pack()
 
 result_label = tkinter.Label(root, text='Result: ')
 result_label.pack()
