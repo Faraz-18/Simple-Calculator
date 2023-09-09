@@ -14,6 +14,9 @@ def calculate(operation):
         result_label['text'] = f"Result: {n1 - n2}"
     elif operation == "multiply":
         result_label['text'] = f"Result: {n1 * n2}"
+    elif operation == "Divide":
+        result_label['text'] = f"Result: {n1 / n2}"        
+        
 
 num1_label = tkinter.Label(root, text='Enter First Number: ')
 num1_label.pack()
@@ -33,6 +36,9 @@ subtract_btn.pack()
 
 multiply_btn = tkinter.Button(root, text='Multiply', command=lambda: calculate("multiply"), foreground="Blue")
 multiply_btn.pack()
+
+divide_btn = tkinter.Button(root, text='Divide', command=lambda: calculate("Divide"), foreground="Blue")
+divide_btn.pack()
 
 result_label = tkinter.Label(root, text='Result: ')
 result_label.pack()
